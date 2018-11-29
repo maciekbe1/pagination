@@ -1,14 +1,14 @@
-function paginationFunction() {
+function pagination() {
         var config = {
-            displayItem : 5, // show 5 elements on page
-            wrapper : $('#secondCommentBlock'), //parent selector of listed elements
-            pageCount : $('#secondCommentBlock .comment-row').length, //count of listed elements
-            paginationList : $('.list-view'), //container of elements
-            paginationPlace : 'after', //(after, before paginationList or class/id $(.class/#id) - must be in wrapper
-            pageLoad : 'first' //defined from which page will be display => 'last' or 'first'
+            displayItem : 5,
+            mainContainer : $('#secondCommentBlock'),
+            itemsContainer : $('#secondCommentBlock .list-view'),
+            eachItem : $('#secondCommentBlock .comment-row'),
+            paginationPlace : 'after',
+            pageLoad : 'last'
         }
-        var commentPagin = new Paginatnion(config)
+        var pagination = new Paginatnion(config);
 }
-$(function(){
-    paginationFunction()
+$(function() {
+    pagination();
 });
